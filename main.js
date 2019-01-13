@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Simple Modal</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-  <button id="modalBtn" class="button">Click Here</button>
+// get modal element
 
-  <div id="simpleModal" class="modal">
-    <div class="modal-content">
-      <span class="closeBtn">&times;</span>
-      <p>This is the modal wow</p>
-    </div>
-  </div>
+var modal = document.querySelector('#simpleModal');
+var modalBtn = document.querySelector('#modalBtn');
+var closeBtn = document.querySelector('.closeBtn');
 
-  <script src="main.js"></script>
-</body>
-</html>
+// listen for open click
+modalBtn.addEventListener('click', openModal);
+// listen for close click
+closeBtn.addEventListener('click', closeModal);
+// listen for outside click
+window.addEventListener('click', clickOutside);
+
+
+function openModal(){
+  modal.style.display = 'block';
+}
+
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+function clickOutside(e){
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+}
