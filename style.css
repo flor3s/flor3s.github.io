@@ -7,7 +7,8 @@ body{
 }
 
 h1 {
-  margin-top: 0;
+  margin: auto;
+  text-align: center;
 }
 
 p {
@@ -25,12 +26,12 @@ a {
 }
 
 .navbar {
-  max-width: 720px;
   margin: 0 auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2em 0 2em;
 }
 
 .navbar-item{
@@ -41,12 +42,19 @@ a {
 .container{
   background-color: #f4f4f4;
   margin: 0px auto 0px auto;
+  min-height: 20em;
   width: 100%;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card{
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 80%;
+  height: 100%;
+  min-height: 100%;
 }
 
 .footer {
@@ -76,13 +84,10 @@ a {
 
 .modal{
   display:none;
-  position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: auto;
   background-color: rgba(0,0,0,0.4);
 }
 
@@ -96,16 +101,8 @@ a {
   animation-duration: 1s;
 }
 
-.closeBtn{
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-}
-
-.closeBtn:hover,.closeBtn:focus{
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.about-text {
+  display: none;
 }
 
 @keyframes modalopen{
