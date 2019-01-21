@@ -6,13 +6,9 @@ body{
   margin: 0;
 }
 
-h1 {
-  margin: auto;
-  text-align: center;
-}
-
-p {
-  margin-block-end: 0em;
+h1 {  
+  margin: 0;
+  font-size: 4em;
 }
 
 a {
@@ -20,9 +16,11 @@ a {
 }
 
 .header {
-  padding: 10px;
   background: #4F2683;
   font-size: 20px;
+  position: absolute;
+  width: 100%;
+  padding: 5px 0 5px 0;
 }
 
 .navbar {
@@ -40,12 +38,14 @@ a {
 }
 
 .container{
-  background-color: #f4f4f4;
+  background-color: /*#f4f4f4*/ #4F2683;
+  color: white;
   margin: 0px auto 0px auto;
-  min-height: 20em;
+  min-height: 100vh;
   width: 100%;
-  border: solid 1px black;
+  border-bottom: solid 1px black;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -58,13 +58,13 @@ a {
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background: #4F2683;
   color: white;
-  text-align: right;
+  text-align: center;
+  padding: 0.2px 0 0.2px 0;
 }
 
 .copyright{
@@ -101,9 +101,9 @@ a {
   animation-duration: 1s;
 }
 
-.about-text {
+/*.about-text {
   display: none;
-}
+}*/
 
 @keyframes modalopen{
   from{opacity: 0}
