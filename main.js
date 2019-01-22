@@ -1,28 +1,4 @@
-// // MODALS
-
-// // get modal element
-
-// var modal = document.querySelector('#simpleModal');
-// var modalBtn = document.querySelector('#modalBtn');
-
-// // listen for open click
-// modalBtn.addEventListener('click', openModal);
-// // listen for outside click
-// window.addEventListener('click', clickOutside);
-
-
-// function openModal(){
-//   modal.style.display = 'block';
-// }
-
-// function clickOutside(e){
-//   if(e.target == modal){
-//     modal.style.display = 'none';
-//     modalBtn.style.display = 'block';
-//   }
-// }
-
-// SCROLLING
+// SMOOTHER SCROLLING //
 function scrollSmoothly(target,duration) {
   var target = document.querySelector(target);
   var targetPosition = target.getBoundingClientRect().top;
@@ -48,8 +24,36 @@ function scrollSmoothly(target,duration) {
   requestAnimationFrame(animation);
 }
 
+// VANILLA JS FADE IN USING ASYNC AWAIT //
+
+function fadeIn(element) {
+  var el = document.querySelector(element);
+  var op = (parseFloat(el.style.opacity) || 0);
+
+  var timer = setInterval( async function () {
+    await fadeDelay(1200);
+    if (op >= .7) op = clearInterval(timer);
+    op += 0.1;
+    el.style.opacity = op;
+  }, 50);
+
+  function fadeDelay(time, val) {
+    return new Promise(function(resolve) {
+      setTimeout(function() {
+        resolve(val);
+      }, time)
+    })
+  };
+};
+
+// scroll and fade on click
 var section1 = document.querySelector('.scroll-to');
+var top = document.querySelector('a.navbar-item');
 
 section1.addEventListener('click', function(){
-  scrollSmoothly('.second', 1000);
-})
+  scrollSmoothly('#two', 1000);
+  fadeIn('.header');
+});
+
+// fade on scroll position as well
+ 
