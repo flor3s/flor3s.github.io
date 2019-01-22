@@ -1,53 +1,55 @@
-// get modal element
+// // MODALS
 
-var modal = document.querySelector('#simpleModal');
-var modalBtn = document.querySelector('#modalBtn');
+// // get modal element
 
-// listen for open click
-modalBtn.addEventListener('click', openModal);
-// listen for outside click
-window.addEventListener('click', clickOutside);
+// var modal = document.querySelector('#simpleModal');
+// var modalBtn = document.querySelector('#modalBtn');
+
+// // listen for open click
+// modalBtn.addEventListener('click', openModal);
+// // listen for outside click
+// window.addEventListener('click', clickOutside);
 
 
-function openModal(){
-  modal.style.display = 'block';
-}
-
-function clickOutside(e){
-  if(e.target == modal){
-    modal.style.display = 'none';
-    modalBtn.style.display = 'block';
-  }
-}
-
-// Scrolling in jQuery, translate this
-
-// var allowAutoScroll = true;
-
-// function scrollTo(id) {
-//   var speed = 1000;
-//   var href = id;
-//   var target = $(href == "#" || href == "" ? 'html' : href);
-//   var position = target.get( 0 ).offsetTop;
-//   $(".mdl-layout__content").animate({scrollTop:position}, speed, "swing", function() {
-//     allowAutoScroll = true;
-//   });
+// function openModal(){
+//   modal.style.display = 'block';
 // }
 
-// $('a.scroll').click(function(){
-//   if (allowAutoScroll === true) {
-//     allowAutoScroll = false;
-//     scrollTo($(this).attr('href'));
+// function clickOutside(e){
+//   if(e.target == modal){
+//     modal.style.display = 'none';
+//     modalBtn.style.display = 'block';
 //   }
-// });
+// }
 
-// $(window).on('load', function() {
-//   $(".loader").fadeOut("slow");
-//   window.sr = ScrollReveal();
-//   sr.reveal('.me', {
-//     delay: 500,
-//     duration: 500,
-//     distance: '10vh'
-//   }, 100);
-// });
+// SCROLLING
+function scrollSmoothly(target,duration) {
+  var target = document.querySelector(target);
+  var targetPosition = target.getBoundingClientRect().top;
+  var startPosition = window.pageYOffset;
+  var startTime = null;
 
+  function animation(currentTime){
+    if(startTime === null) startTime = currentTime;
+    var timeElapsed = currentTime - startTime;
+    var run = ease(timeElapsed, startPosition, targetPosition, duration);
+    window.scrollTo(0, run);
+    if(timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  // easing function for smoother scrolling: http://gizma.com/easing/
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+var section1 = document.querySelector('.scroll-to');
+
+section1.addEventListener('click', function(){
+  scrollSmoothly('.second', 1000);
+})
