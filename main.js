@@ -24,36 +24,27 @@ function scrollSmoothly(target,duration) {
   requestAnimationFrame(animation);
 }
 
-// VANILLA JS FADE IN USING ASYNC AWAIT //
+// scroll click
+var firstScroll = document.querySelector('.scroll-to');
+var secondScroll = document.querySelector('.button');
+var secondContainer = document.querySelector('#two');
+var navFadeHeight = secondContainer.getBoundingClientRect().top;
+var header = document.querySelector('.header');
 
-function fadeIn(element) {
-  var el = document.querySelector(element);
-  var op = (parseFloat(el.style.opacity) || 0);
-
-  var timer = setInterval( async function () {
-    await fadeDelay(1200);
-    if (op >= .7) op = clearInterval(timer);
-    op += 0.1;
-    el.style.opacity = op;
-  }, 50);
-
-  function fadeDelay(time, val) {
-    return new Promise(function(resolve) {
-      setTimeout(function() {
-        resolve(val);
-      }, time)
-    })
-  };
-};
-
-// scroll and fade on click
-var section1 = document.querySelector('.scroll-to');
-var top = document.querySelector('a.navbar-item');
-
-section1.addEventListener('click', function(){
+firstScroll.addEventListener('click', function(){
   scrollSmoothly('#two', 1000);
-  fadeIn('.header');
-});
+})
 
-// fade on scroll position as well
- 
+secondScroll.addEventListener('click', function(){
+  scrollSmoothly('#three', 1000);
+})
+
+// FADE IN //
+
+// fade in navbar on scroll position
+ window.onscroll = function(e){
+  if(window.pageYOffset >= navFadeHeight - 10){
+    header.classList.remove('hide-el');
+    header.classList.add('fade-in');
+  }
+ }
