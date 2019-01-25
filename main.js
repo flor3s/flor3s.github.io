@@ -29,6 +29,7 @@ var firstScroll = document.querySelector('.scroll-to');
 var secondScroll = document.querySelector('.button');
 var secondContainer = document.querySelector('#two');
 var navFadeHeight = secondContainer.getBoundingClientRect().top;
+
 var header = document.querySelector('.header');
 
 firstScroll.addEventListener('click', function(){
@@ -43,7 +44,7 @@ secondScroll.addEventListener('click', function(){
 
 // fade in navbar on scroll position
  window.onscroll = function(e){
-  if(window.pageYOffset >= navFadeHeight - 10){
+  if(window.pageYOffset >= navFadeHeight - 1){
     header.classList.remove('hide-el');
     header.classList.add('fade-in');
   }

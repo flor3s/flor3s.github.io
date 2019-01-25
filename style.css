@@ -9,6 +9,7 @@ body {
 h1 {  
   margin-bottom: 0;
   font-size: 4em;
+  text-align: center;
 }
 
 h2 {
@@ -18,6 +19,10 @@ h2 {
 
 h3 {
   margin-top: 0;
+}
+
+img.image {
+  width: 100%;
 }
 
 p#nav-text {
@@ -35,7 +40,6 @@ i.fa-caret-down {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 5px 0 5px 0;
 }
 
 .navbar {
@@ -60,6 +64,10 @@ i.fa-caret-down {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.about-me {
+  max-width: 70%;
 }
 
 .all-projects {
@@ -102,26 +110,54 @@ i.fa-caret-down {
 .grid {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1200px;
   margin: 20px auto;
-  padding: 8px;
+  padding: 1em;
 }
 
 .project {
   width: 30%;
-  margin: 8px;
+  min-width: 300px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   min-height: 200px;
   overflow: hidden;
   position: relative;
-  border-radius: 2px;
+  background: gray;
+  border-radius: 5px;
 }
 
-.image {
+.app-title {
+  padding: 1em;
+  text-align: center;
+}
 
+.app-img {
+  background-size: cover;
+}
+
+.app-desc {
+  padding: 1em;
+}
+
+.technologies {
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.tech {
+  padding: 0 1em 0 1em;
+}
+
+.app-links {
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .footer {
