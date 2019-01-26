@@ -90,6 +90,7 @@ i.fa-caret-down {
 
 .about-me {
   width: calc(50% - 2em);
+  min-width: 300px;
 }
 
 .align {
@@ -102,10 +103,6 @@ i.fa-caret-down {
 
 .text-center {
   text-align: center;
-}
-
-.text-justified {
-  text-align: justify; 
 }
 
 .about-technologies {
@@ -187,12 +184,13 @@ i.fa-caret-down {
 }
 
 .technologies {
-  padding: 1em;
+  width: auto;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: center;
-  margin-top: auto;
+  padding: 1em;
   border-top: 1px solid rgba(0,0,0,0.2);
+  margin-top: auto;
 }
 
 .app-links {
