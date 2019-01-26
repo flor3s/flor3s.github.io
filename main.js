@@ -25,19 +25,14 @@ function scrollSmoothly(target,duration) {
 }
 
 // scroll click
-var firstScroll = document.querySelector('.scroll-to');
-var secondScroll = document.querySelector('.button');
+var scroll = document.querySelector('.scroll-to');
 var secondContainer = document.querySelector('#two');
 var navFadeHeight = secondContainer.getBoundingClientRect().top;
 
 var header = document.querySelector('.header');
 
-firstScroll.addEventListener('click', function(){
+scroll.addEventListener('click', function(){
   scrollSmoothly('#two', 1000);
-})
-
-secondScroll.addEventListener('click', function(){
-  scrollSmoothly('#three', 1000);
 })
 
 // FADE IN //
