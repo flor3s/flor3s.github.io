@@ -332,6 +332,10 @@ i.fa-caret-down {
     margin: auto;
   }
 
+  .bounce {
+    height: 4em;
+  }
+
   .about-text {
     display: none;
   }
