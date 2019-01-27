@@ -307,6 +307,14 @@ i.fa-caret-down {
   transform: scale(1.2);
 }
 
+.project-zoom {
+  transition: transform .2s;
+}
+
+.project-zoom:hover {
+  transform: scale(1.02);
+}
+
 /* Keyframes */
 @keyframes bounce {
   0%       { bottom:5px; }
