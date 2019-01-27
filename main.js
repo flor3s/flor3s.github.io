@@ -1,7 +1,7 @@
 // SMOOTHER SCROLLING //
 function scrollSmoothly(target,duration) {
   var target = document.querySelector(target);
-  var targetPosition = target.getBoundingClientRect().top;
+  var targetPosition = target.getBoundingClientRect().top + 1;
   var startPosition = window.pageYOffset;
   var startTime = null;
 
@@ -35,12 +35,17 @@ scroll.addEventListener('click', function(){
   scrollSmoothly('#two', 1000);
 })
 
-// FADE IN //
+// NAV BAR //
+var prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
 
-// fade in navbar on scroll position
- window.onscroll = function(e){
-  if(window.pageYOffset >= navFadeHeight - 1){
+  // show navbar based on scroll direction
+  if (prevScrollPos > currentScrollPos) {
+    header.style.top = "0";
+  } else {
     header.classList.remove('hide-el');
-    header.classList.add('fade-in');
+    header.style.top = "-80px";
   }
- }
+  prevScrollPos = currentScrollPos;
+}

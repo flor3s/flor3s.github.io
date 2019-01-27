@@ -51,6 +51,7 @@ i.fa-caret-down {
   top: 0;
   width: 100%;
   z-index: 1;
+  transition: top .3s;
 }
 
 .navbar {
@@ -59,7 +60,7 @@ i.fa-caret-down {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2em 0 2em;
+  padding: 0 1em 0 2em;
 }
 
 .navbar-item {
@@ -82,11 +83,9 @@ i.fa-caret-down {
   background-color: #e8e8e8;
   color: #000;
   margin: 0px auto 0px auto;
-  min-height: 20vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 3em;
 }
 
 .lead-mobile {
@@ -96,6 +95,7 @@ i.fa-caret-down {
 .about-me {
   width: calc(50% - 2em);
   min-width: 300px;
+  margin-top: 1px;
 }
 
 .align {
@@ -258,7 +258,12 @@ i.fa-caret-down {
 
 .fade-in {
   animation: fadein;
-  animation-duration: 1.5s;
+  animation-duration: .5s;
+}
+
+.fade-out {
+  animation: fadeout;
+  animation-duration: .5s;
 }
 
 /* Tooltips */
@@ -324,8 +329,8 @@ i.fa-caret-down {
 }
 
 @keyframes fadein {
-  from{opacity: 0}
-  to{opacity: 1 }
+  from{opacity: 0; }
+  to{opacity: 1; }
 }
 
 /* media queries for mobile */
