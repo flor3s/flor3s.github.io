@@ -333,16 +333,11 @@ i.fa-caret-down {
   }
 
   .bounce {
-    height: 4em;
+    height: 6em;
   }
 
   .about-text {
     display: none;
-  }
-
-  .about-text-mobile {
-    display: block;
-    margin: 0;  
   }
 
   .copyright {
