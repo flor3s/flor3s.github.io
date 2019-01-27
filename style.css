@@ -230,6 +230,10 @@ i.fa-caret-down {
   padding: 0 2em 0 2em;
 }
 
+.copyright-mobile {
+  display: none;
+}
+
 .footer-link {
   color: white;
   text-decoration: none;
