@@ -162,7 +162,7 @@ i.fa-caret-down {
   background: #d8d8d8;
   width: calc(50% - 20px);
   max-width: 500px;
-  min-width: 300px;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   min-height: 200px;
@@ -367,6 +367,11 @@ i.fa-caret-down {
 
   .about-text {
     display: none;
+  }
+
+  .project {
+    width: calc(50% - 20px);
+    min-width: 300px;
   }
 
   .copyright {
