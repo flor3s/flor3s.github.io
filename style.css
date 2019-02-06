@@ -71,6 +71,7 @@ i.fa-caret-down {
 .navbar-item {
   display: inline-block;
   color: #e8e8e8;
+  padding: 0 5px 0 5px;
 }
 
 .container-one {
