@@ -30,6 +30,11 @@ h4 {
   margin: 0 auto 0 auto;
 }
 
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 img.image {
   width: 100%;
 }
@@ -176,6 +181,20 @@ i.fa-caret-down {
     0 2px 4px -1px rgba(0,0,0,.2);
 }
 
+.filler {
+  background: none;
+  width: calc(50% - 20px);
+  max-width: 500px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  color: #000;
+  border-radius: 5px;
+  margin: 10px;
+
+}
+
 .app-img {
   height: 50%;
   overflow: hidden;
@@ -189,11 +208,12 @@ i.fa-caret-down {
 
 .app-desc {
   font-family: 'Monserrat', sans-serif;
-  padding: 1em;
+  padding: 1em ;
 }
 
 .technologies {
   width: auto;
+  height: 3em;
   display: flex;
   flex-direction: row;
   justify-content: center;
