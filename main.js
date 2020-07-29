@@ -13,7 +13,7 @@ function scrollSmoothly(target,duration) {
     if(timeElapsed < duration) requestAnimationFrame(animation);
   }
 
-  // easing function for smoother scrolling: http://gizma.com/easing/
+  // easing function to dynamically update the scroll position as it moves down the page: http://gizma.com/easing/
   function ease(t, b, c, d) {
     t /= d / 2;
     if (t < 1) return c / 2 * t * t + b;
