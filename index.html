@@ -42,7 +42,7 @@
   <div class="container-two align justify" id="two">
     <div class="card about-me">
       <h2 class="text-center" id="fade-point">About Me</h2>
-      <h3 class>Hi! I'm <strong>Daniel Flores</strong>, a Data Administrator and Web Developer based in Philadelphia. I'm passionate about efficient data architecture and creating enjoyable user experiences. As a web developer I generally use technologies like <strong>MongoDB</strong>, <strong>React</strong>, and <strong>Node.js</strong>, but I'm comfortable using whatever tools are right for the project. For example, this site was built without frameworks. Instead, I opted for basic <strong>HTML</strong>, custom <strong>CSS</strong>, and vanilla <strong>JavaScript</strong>.
+      <h3 class>Hey, I'm <strong>Daniel Flores</strong>, a Data Administrator and Web Developer based in Philadelphia. I'm passionate about efficient data architecture and creating enjoyable user experiences. As a web developer I generally use technologies like <strong>MongoDB</strong>, <strong>React</strong>, and <strong>Node.js</strong>, but I'm comfortable using whatever tools are right for the project. For example, this site was built without frameworks. Instead, I opted for basic <strong>HTML</strong>, custom <strong>CSS</strong>, and vanilla <strong>JavaScript</strong>.
     </div>
     <div class="card about-technologies">
       <div class="about-tech tooltip translucent hover zoom">
@@ -78,6 +78,10 @@
         <span class="tooltiptext">React</span>
       </div>
       <div class="about-tech tooltip translucent hover zoom">
+        <img class="image" src="assets/images/icons/mongodb.png" alt="MongoDB">
+        <span class="tooltiptext">MongoDB</span>
+      </div>
+      <div class="about-tech tooltip translucent hover zoom">
         <img class="image" src="assets/images/icons/mysql.png" alt="MySQL">
         <span class="tooltiptext">MySQL</span>
       </div>
@@ -85,12 +89,17 @@
         <img class="image" src="assets/images/icons/postgresql.png" alt="PostgreSQL">
         <span class="tooltiptext">PostgreSQL</span>
       </div>
+      <div class="about-tech tooltip translucent hover zoom">
+        <img class="image" src="assets/images/icons/heroku.png" alt="Heroku">
+        <span class="tooltiptext">Heroku</span>
+      </div>
     </div>
       <h2>Some of My Work</h2>
   </div>  
 
   <div class="all-projects justify" id="three">
     <div class="grid justify">
+
       <div class="project project-zoom">
         <div class="app-img">
           <img class="image" src="assets/images/projects/blog.png">
@@ -123,13 +132,56 @@
           <div class="about-tech">
             <img class="image" src="assets/images/icons/postgresql.png" alt="PostgreSQL">
           </div>
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/heroku.png" alt="Heroku">
+          </div>
         </div>
         <div class="app-links">
           <div class="link">
-            <a href="http://dfblog.herokuapp.com" target="_blank">Live Site</a>
+            <a href="https://dfblog.herokuapp.com" target="_blank">Live Site</a>
           </div>
           <div class="link">
             <a href="https://github.com/flor3s/portfolio" target="_blank">Repository</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project project-zoom">
+        <div class="app-img">
+          <img class="image" src="assets/images/projects/expensetracker.png">
+        </div>
+        <div class="app-title">
+          <h4>Expense Tracker</h4>
+        </div>
+        <div class="app-desc">
+          A single page full-stack React app that allows the user to view, add, and delete financial records in real time. It uses React's Context API as its state manager and changes to the financial records are stored via MongoDB. It also utilizes functional components with React Hooks and has its own custom CSS. The site is live in production via Heroku.
+        </div> 
+        <div class="technologies">
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/html5.png" alt="HTML5">
+          </div>
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/css3.png" alt="CSS3">
+          </div>
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/javascript.png" alt="JavaScript">
+          </div>          
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/react.png" alt="React">
+          </div>
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/mongodb.png" alt="MongoDB">
+          </div>
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/heroku.png" alt="Heroku">
+          </div>
+        </div>
+        <div class="app-links">
+          <div class="link">
+            <a href="https://florexpenses.herokuapp.com" target="_blank">Live Site</a>
+          </div>
+          <div class="link">
+            <a href="https://github.com/flor3s/expense-tracker" target="_blank">Repository</a>
           </div>
         </div>
       </div>
@@ -183,6 +235,7 @@
             <img class="image" src="assets/images/icons/css3.png" alt="CSS3">
           </div>
         </div>
+        
         <div class="app-links">
           <div class="link">
             <a href="https://greyhound-bellflower-wjlf.squarespace.com/" target="_blank">Live Site</a>
@@ -226,40 +279,6 @@
 
       <div class="project project-zoom">
         <div class="app-img">
-          <img class="image" src="assets/images/projects/tasklist.png">
-        </div>
-        <div class="app-title">
-          <h4>TaskList</h4>
-        </div>
-        <div class="app-desc">
-          A to-do app created using React. Users can create, mark as complete, and delete tasks. A filter component changes the view based on completed status. Changes persist via API calls to a JSON Server database.
-        </div> 
-        <div class="technologies">
-          <div class="about-tech">
-            <img class="image" src="assets/images/icons/html5.png" alt="HTML5">
-          </div>
-          <div class="about-tech">
-            <img class="image" src="assets/images/icons/css3.png" alt="CSS3">
-          </div>
-          <div class="about-tech">
-            <img class="image" src="assets/images/icons/javascript.png" alt="JavaScript">
-          </div>
-          <div class="about-tech">
-            <img class="image" src="assets/images/icons/react.png" alt="React">
-          </div>
-        </div>
-        <div class="app-links">
-          <div class="link">
-            <a href="#"></a>
-          </div>
-          <div class="link">
-            <a href="https://github.com/flor3s/to-do " target="_blank">Repository</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project project-zoom">
-        <div class="app-img">
           <img class="image" src="assets/images/projects/airbooker.png">
         </div>
         <div class="app-title">
@@ -284,6 +303,9 @@
           <div class="about-tech">
             <img class="image" src="assets/images/icons/postgresql.png" alt="PostgreSQL">
           </div>
+          <div class="about-tech">
+            <img class="image" src="assets/images/icons/heroku.png" alt="Heroku">
+          </div>
         </div>
         <div class="app-links">
           <div class="link">
@@ -299,7 +321,7 @@
         <div class="app-img">
           <img class="image" src="assets/images/projects/bookmarker.png">
         </div>
-        <div class="app-title">dan/snap/chromium/1143
+        <div class="app-title">
           <h4>Bookmarker</h4>
         </div>
         <div class="app-desc">
